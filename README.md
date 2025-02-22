@@ -34,3 +34,31 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+src/
+├── app/                  # Pages and layouts
+│   ├── layout.tsx        # Root layout (includes Navbar)
+│   ├── page.tsx          # Home page ("/")
+│   ├── about/page.tsx    # About page ("/about")
+│   ├── contact/page.tsx  # Contact page ("/contact")
+│   ├── dashboard/        # Private dashboard ("/dashboard")
+│   │   ├── layout.tsx    # Dashboard layout
+│   │   ├── page.tsx      # Dashboard home
+│   │   ├── settings/     # Nested route: "/dashboard/settings"
+│   │   │   ├── page.tsx  
+│   │   │   ├── Account.tsx  
+│   │   │   ├── Security.tsx  
+│   ├── api/              # API routes ("/api/*")
+│   │   ├── auth/route.ts # API for authentication
+│   │   ├── user/route.ts # API for user data
+│
+├── components/           # UI components (reusable)
+│   ├── Navbar.tsx        # Navigation bar
+│   ├── Footer.tsx        # Footer component
+│   ├── HeroSection.tsx   # Hero section for homepage
+│   ├── Testimonial.tsx   # Testimonial component
+│
+├── hooks/                # Custom React hooks
+├── lib/                  # Utility functions (helpers, API calls)
+├── services/             # API clients, database functions
+├── styles/               # Global styles, Tailwind configs
+└── types/                # TypeScript types
