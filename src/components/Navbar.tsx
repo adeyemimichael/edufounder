@@ -1,17 +1,33 @@
-"use client"; // Required if using client-side interactivity (e.g., dropdowns)
-import Contact from "@/app/contact/page";
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
+  const pathname = usePathname();
+
   return (
     <nav className="bg-blue-600 text-white p-4">
-      <div className="container mx-auto flex justify-between items-center  ">
+      <div className="container mx-auto flex justify-between items-center">
         <h1 className="text-xl font-bold">EduFounder</h1>
-        <ul className="flex space-x-4">
-          <li><Link href="/">Home</Link></li>
-          <li><Link href="/about">About</Link></li>
-          <li><Link href=" /contact">Contact</Link></li>
-          <li><Link href="/dashboard">Login</Link></li>
+        <ul className="flex space-x-6">
+          {[
+            { name: "Home", path: "/" },
+            { name: "About", path: "/about" },
+            { name: "Contact", path: "/contact" },
+            { name: "Dashboard", path: "/dashboard" },
+          ].map((link) => (
+            <li key={link.path}>
+              <Link
+                href={link.path}
+                className={`hover:text-gray-300 ${
+                  pathname === link.path ? "font-bold underline" : ""
+                }`}
+              >
+                {link.name}
+              </Link>
+            </li>
+          ))}
         </ul>
       </div>
     </nav>

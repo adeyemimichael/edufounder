@@ -1,4 +1,6 @@
 export default function Contact () {
 
-    <h1>this is the contact site </h1>
+return(
+    <div>WELCOME TO THE CONTACT PAGE</div>
+)
 }
