@@ -28,7 +28,8 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-           <Navbar />  {/* Navbar appears globally on every page */}
+        {/* Navbar appears globally on every page */}
+           <Navbar />  
            <main>{children}</main>
       <Footer></Footer>
       </body>
