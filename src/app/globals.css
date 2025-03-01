@@ -26,7 +26,9 @@ body {
 
 @layer components{
   .btn {
-    @apply bg-black text-white font-medium  px-4 py-2 items-center justify-center rounded-lg tracking-tight;
+    @apply bg-[#0b0f13] text-white font-medium  px-4 py-2 items-center justify-center rounded-lg tracking-tight;
   }
-  
+  .btn-secondary {
+    @apply bg-[#008ef8] text-white font-medium px-4 py-3 items-center justify-center rounded-lg tracking-tighter;
+  }
 }
