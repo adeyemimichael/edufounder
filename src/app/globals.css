@@ -31,4 +31,13 @@ body {
   .btn-secondary {
     @apply bg-[#008ef8] text-white font-medium px-4 py-3 items-center justify-center rounded-lg tracking-tighter;
   }
+  .heading-tag{
+    @apply text-5xl md:text-7xl tracking-tighter font-bold bg-gradient-to-b from-black to-[#008ef8] text-transparent bg-clip-text mt-6;
+  }
+  .heading-section{
+    @apply text-3xl md:text-4xl tracking-tight font-bold text-black mt-4  text-center ;
+  }
+  .bg-gradient{
+    @apply w-[100vh] h-[100vh] bg-[radial-gradient(circle,rgba(236,72,153,0.3),rgba(96,165,250,0.2),rgba(52,211,153,0.1))] blur-3xl opacity-100
+  }
 }
