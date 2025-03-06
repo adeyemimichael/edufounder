@@ -3,7 +3,7 @@ export default function Testimonials (){
 
     return(
          <section className=" bg-gray-400">
-           <div className="px-4 py-4  tracking-tighter mx-2 ">
+           <div className=" container px-4 py-4  tracking-tighter mx-2 ">
             <div className="flex items-center justify-center">
              <h2 className="heading-section">How to Use</h2>
              </div>

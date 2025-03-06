@@ -9,7 +9,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <nav className=" sticky top-0 backdrop-blur-sm z-20 text-black p-4">
+    <nav className=" sticky top-0 backdrop-blur-md z-40 text-black p-4">
       <div className="container mx-auto flex justify-between items-center  px-4 sm:px-6 lg:px-8 ">
         <Image src={LogoImage}
         alt="My Image" width={200} height={200} />

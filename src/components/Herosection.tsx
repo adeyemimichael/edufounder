@@ -7,12 +7,16 @@ import { useState } from "react";
 
 export default function HeroSection() {
   const [handleClick, setHandleclick] = useState();
-
+// //  if ( handleClick === null ) {
+//   try (console.log("i am trying my hand what i think is right "))
+//  }
   return (
     <section className="relative pt-8 pb-20 md:pt-5 md:pb-10 overflow-x-clip">
       {/* 🔥 Radial Gradient Background */}
       <div className="absolute inset-0 flex justify-center items-center pointer-events-none">
-        
+        {/* ✅ Option 1: Tailwind Native Gradient (Requires v3.1+)
+        <div className="w-[100%] h-[100vh] bg-gradient-radial from-pink-300 via-blue-500 to-green-300/60 blur-3xl opacity-20"></div> */}
+
        
         <div className="bg-gradient"></div>
       </div>
