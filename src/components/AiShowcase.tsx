@@ -2,22 +2,26 @@
 export default function Testimonials (){
 
     return(
-         <section className=" bg-gray-400">
+         <section className=" bg-gray-400  h-screen grid place-content-center gap-2 text-center text-black">
            <div className=" container px-4 py-4  tracking-tighter mx-2 ">
             <div className="flex items-center justify-center">
              <h2 className="heading-section">How to Use</h2>
              </div>
              <div>
                 <ul>
-                    <li>Tell Us about your passion </li>
-                    <li>Select any Academic record you have the best score in </li>
-                    <li>Upload and let us do the magic </li>
-                    <li>Get a tailored career advise based on your preferences  </li>
-                    <li>Locate the schools of your choice based on our recommendation</li>
-                </ul>
+                  <FlipLink href="#"> Your</FlipLink>
+                  <FlipLink href="#">One-stop </FlipLink>
+                  <FlipLink href="#">Career Navigation </FlipLink>
+                  <FlipLink href="#">Platform  </FlipLink>
+                
+                   </ul>
              </div>
            </div>
          </section>
 
     )
+}
+
+const FlipLink = ({children , href }: {children: string, href:string  }) => {
+  return ( <a href= {href}> {children} </a>)
 }
