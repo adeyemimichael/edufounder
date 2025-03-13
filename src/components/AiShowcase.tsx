@@ -10,10 +10,10 @@ export default function Testimonials (){
              </div>
              <div>
                 <ul>
-                  <FlipLink href="#"> Your</FlipLink>
-                  <FlipLink href="#">One-stop </FlipLink>
-                  <FlipLink href="#">Career Navigation </FlipLink>
-                  <FlipLink href="#">Platform  </FlipLink>
+                  <FlipLink value  ="one"> Your One-Stop</FlipLink>
+                  <FlipLink value ="two ">Hi </FlipLink>
+                  <FlipLink value ="three ">Career Navigation </FlipLink>
+                  <FlipLink  value  ="four ">Platform  </FlipLink>
                 
                    </ul>
              </div>
@@ -24,9 +24,9 @@ export default function Testimonials (){
 }
  const DURATION = 0.25
  const STAGGERED = 0.025
-const FlipLink = ({children , href }: {children: string, href:string  }) => {
-  return ( <motion.a
-   href= {href} 
+const FlipLink = ({children , value }: {children: string, value:string  }) => {
+  return ( <motion.h1
+   key= {value} 
    initial= "initials" 
    whileInView="hovered" 
    className=" relative block overflow-hidden whitespace-nowrap 
@@ -69,5 +69,5 @@ const FlipLink = ({children , href }: {children: string, href:string  }) => {
      className="inline-block">
       {l}
     </motion.span >})}
-    </div> </motion.a>)
+    </div> </motion.h1>)
 }
