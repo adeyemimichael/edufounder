@@ -25,16 +25,16 @@ export default function HeroSection() {
       <div className="relative z-10">
         <div className="md:flex items-center">
           <motion.div className="md:w-[478px]">
-            {/* <h1 className="heading-tag">
+            <h1 className="heading-tag">
               Your <span className="font-medium italic md:text-7xl  text-4xl">one-stop</span> Career Navigation Platform
-            </h1> */}
-            <ul>
+            </h1>
+            {/* <ul>
                   <FlipLink value  ="one"> Your</FlipLink>
                   <FlipLink value ="two "> One-Stop </FlipLink>
                   <FlipLink value ="three ">Career Navigation </FlipLink>
                   <FlipLink  value  ="four ">Platform  </FlipLink>
                 
-                   </ul>
+                   </ul> */}
             <p className="text-xl text-[#010d3e] tracking-tight mt-6">
               Your career path shouldn’t feel like a maze. Let’s map it together. 
               Keep your credentials safe, organized, and ready for what’s next.
@@ -53,52 +53,52 @@ export default function HeroSection() {
     </section>
   );
 }
-const DURATION = 0.25
- const STAGGERED = 0.025
-const FlipLink = ({children , value }: {children: string, value:string  }) => {
-  return ( <motion.h1
-   key= {value} 
-   initial= "initials" 
-   whileHover="hovered" 
-   className=" relative block overflow-hidden whitespace-nowrap 
-   heading-tag">
+// const DURATION = 0.25
+//  const STAGGERED = 0.025
+// const FlipLink = ({children , value }: {children: string, value:string  }) => {
+//   return ( <motion.h1
+//    key= {value} 
+//    initial= "initials" 
+//    whileHover="hovered" 
+//    className=" relative block overflow-hidden whitespace-nowrap 
+//    heading-tag">
   
-   <div
-  >
+//    <div
+//   >
 
-   {children.split("").map((l, i) => {
-    return <motion.span key={i} 
-    variants={{
-      initials: {y : 0},
-      hovered: { y : "-100%"}
-     }}
-     transition={{
-      duration: DURATION,
-      ease:"easeInOut",
-      delay: STAGGERED * i
-     }}
-     className="inline-block">
-      {l}
-    </motion.span >
-   })}</div>
-   <div
-   className="absolute inset-0 "
-   >
+//    {children.split("").map((l, i) => {
+//     return <motion.span key={i} 
+//     variants={{
+//       initials: {y : 0},
+//       hovered: { y : "-100%"}
+//      }}
+//      transition={{
+//       duration: DURATION,
+//       ease:"easeInOut",
+//       delay: STAGGERED * i
+//      }}
+//      className="inline-block">
+//       {l}
+//     </motion.span >
+//    })}</div>
+//    <div
+//    className="absolute inset-0 "
+//    >
 
-{children.split("").map((l, i) => {
+// {children.split("").map((l, i) => {
 
-    return <motion.span key={i} 
-    variants={{
-      initials: {y : "100%"},
-      hovered: { y : 0}
-     }}
-     transition={{
-      duration: DURATION,
-      ease:"easeInOut",
-      delay: STAGGERED * i
-     }}
-     className="inline-block">
-      {l}
-    </motion.span >})}
-    </div> </motion.h1>)
-}
+//     return <motion.span key={i} 
+//     variants={{
+//       initials: {y : "100%"},
+//       hovered: { y : 0}
+//      }}
+//      transition={{
+//       duration: DURATION,
+//       ease:"easeInOut",
+//       delay: STAGGERED * i
+//      }}
+//      className="inline-block">
+//       {l}
+//     </motion.span >})}
+//     </div> </motion.h1>)
+// }
