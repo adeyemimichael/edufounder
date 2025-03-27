@@ -1,5 +1,5 @@
 
-import Waitlist from "@/components/WaitList"
+import Waitlist from "@/components/Login"
 export default function Login () {
 
     return (

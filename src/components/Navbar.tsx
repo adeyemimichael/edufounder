@@ -17,7 +17,6 @@ export default function Navbar() {
           {[
             { name: "Home", path: "/" },
             { name: "About", path: "/about" },
-            { name: "Contact", path: "/contact" },
             { name: "Waitlist", path: "/login" },
           ].map((link) => (
             <li key={link.path}>

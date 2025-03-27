@@ -2,7 +2,7 @@
 import Image from "next/image";
 import ImageIllustration from "../assets/noodle.png";
 import { motion } from "framer-motion";
-import Waitlist from "./WaitList";
+import Waitlist from "./Login";
 import { useState } from "react";
 
 export default function HeroSection() {

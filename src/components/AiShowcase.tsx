@@ -11,7 +11,7 @@ export default function Testimonials (){
              <div>
                 <ul>
                   <FlipLink value  ="one"> Your One-Stop</FlipLink>
-                  <FlipLink value ="two ">Hi </FlipLink>
+                  {/* <FlipLink value ="two ">Hi </FlipLink> */}
                   <FlipLink value ="three ">Career Navigation </FlipLink>
                   <FlipLink  value  ="four ">Platform  </FlipLink>
                 
