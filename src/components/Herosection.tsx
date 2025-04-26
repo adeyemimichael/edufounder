@@ -1,104 +1,83 @@
 "use client";
-import Image from "next/image";
-import ImageIllustration from "../assets/noodle.png";
 import { motion } from "framer-motion";
-import Waitlist from "./Login";
-import { useState } from "react";
+import Image from "next/image";
+import BgIllustration from "../assets/noodle.png";
+import ExtraIllustration from "../assets/background.jpg"; 
 
 export default function HeroSection() {
-  const [handleClick, setHandleclick] = useState();
-// //  if ( handleClick === null ) {
-//   try (console.log("i am trying my hand what i think is right "))
-//  }
   return (
-    <section className="relative pt-8 pb-20 md:pt-5 md:pb-10 overflow-x-clip">
-      {/* 🔥 Radial Gradient Background */}
+    <section className="relative min-h-screen flex items-center justify-center bg-white overflow-hidden">
+      
+      {/* Gradient Background */}
       <div className="absolute inset-0 flex justify-center items-center pointer-events-none">
-        {/* ✅ Option 1: Tailwind Native Gradient (Requires v3.1+)
-        <div className="w-[100%] h-[100vh] bg-gradient-radial from-pink-300 via-blue-500 to-green-300/60 blur-3xl opacity-20"></div> */}
-
-       
         <div className="bg-gradient"></div>
       </div>
 
-      {/* ✅ Content */}
-      <div className="relative z-10">
-        <div className="md:flex items-center">
-          <motion.div className="md:w-[478px]">
-            <h1 className="heading-tag">
-              Your <span className="font-medium italic md:text-7xl  text-4xl">one-stop</span> Career Navigation Platform
-            </h1>
-            {/* <ul>
-                  <FlipLink value  ="one"> Your</FlipLink>
-                  <FlipLink value ="two "> One-Stop </FlipLink>
-                  <FlipLink value ="three ">Career Navigation </FlipLink>
-                  <FlipLink  value  ="four ">Platform  </FlipLink>
-                
-                   </ul> */}
-            <p className="text-xl text-[#010d3e] tracking-tight mt-6">
-              Your career path shouldn’t feel like a maze. Let’s map it together. 
-              Keep your credentials safe, organized, and ready for what’s next.
-              We are redefining digital Brochure system for students.
-            </p>
-            <div className="flex gap-1 mt-[30px] items-center">
-              <button className="btn btn-primary">Join our Waitlist</button>
-            </div>
-          </motion.div>
+      {/* Background Decoration */}
+      <div className="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none">
+        <Image 
+          src={BgIllustration} 
+          alt="Background Illustration" 
+          className="w-[600px] h-auto object-contain" 
+        />
+      </div>
 
-          <div className="illustration">
-            <Image src={ImageIllustration} alt="Illustration for the image" />
-          </div>
+      {/* Main Content */}
+      <div className="relative z-10 flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto px-6 py-32 gap-10">
+        
+        {/* Left Text */}
+        <div className="text-center md:text-left max-w-xl">
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-4xl md:text-6xl font-bold text-gray-700 leading-tight"
+          >
+            Your{" "}
+            <span className="text-black font-medium italic">
+              one-stop
+            </span>{" "}
+            Career Navigation Platform
+          </motion.h1>
+
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="mt-6 text-lg md:text-xl text-gray-600 leading-relaxed"
+          >
+            Your career path shouldn’t feel like a maze. Let’s map it together.
+            Keep your credentials safe, organized, and ready for what’s next. 
+            We are redefining the digital brochure system for students.
+          </motion.p>
+
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            className="mt-8"
+          >
+            <button className="inline-block rounded-full bg-black text-white px-8 py-4 text-base font-semibold hover:bg-gray-800 transition">
+              Join our Waitlist
+            </button>
+          </motion.div>
         </div>
+
+        {/* Right Illustration */}
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1 }}
+          className="flex justify-center md:justify-end flex-[1.5] "
+        >
+          <Image 
+            src={ExtraIllustration} 
+            alt="Side Illustration" 
+            className="w-full max-w-lg md:max-w-xl h-auto object-contain rounded-2xl shadow-lg opacity-90"
+          />
+        </motion.div>
+
       </div>
     </section>
   );
 }
-// const DURATION = 0.25
-//  const STAGGERED = 0.025
-// const FlipLink = ({children , value }: {children: string, value:string  }) => {
-//   return ( <motion.h1
-//    key= {value} 
-//    initial= "initials" 
-//    whileHover="hovered" 
-//    className=" relative block overflow-hidden whitespace-nowrap 
-//    heading-tag">
-  
-//    <div
-//   >
-
-//    {children.split("").map((l, i) => {
-//     return <motion.span key={i} 
-//     variants={{
-//       initials: {y : 0},
-//       hovered: { y : "-100%"}
-//      }}
-//      transition={{
-//       duration: DURATION,
-//       ease:"easeInOut",
-//       delay: STAGGERED * i
-//      }}
-//      className="inline-block">
-//       {l}
-//     </motion.span >
-//    })}</div>
-//    <div
-//    className="absolute inset-0 "
-//    >
-
-// {children.split("").map((l, i) => {
-
-//     return <motion.span key={i} 
-//     variants={{
-//       initials: {y : "100%"},
-//       hovered: { y : 0}
-//      }}
-//      transition={{
-//       duration: DURATION,
-//       ease:"easeInOut",
-//       delay: STAGGERED * i
-//      }}
-//      className="inline-block">
-//       {l}
-//     </motion.span >})}
-//     </div> </motion.h1>)
-// }

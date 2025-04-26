@@ -1,4 +1,5 @@
 "use client";
+
 import Image from "next/image";
 import LogoImage from "@/assets/logo.png";
 import Link from "next/link";
@@ -8,28 +9,39 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 backdrop-blur-md z-40 text-black p-4">
-      <nav className="container mx-auto flex justify-between items-center px-4 sm:px-6 lg:px-8">
+    <header className="sticky top-0 z-40 w-full bg-white/70 backdrop-blur-md border-b">
+      <nav className="container mx-auto flex items-center justify-between py-4 px-4 sm:px-6 lg:px-8">
         {/* Logo */}
-        <Image src={LogoImage} alt="My Image" width={200} height={200} />
+        <div className="flex items-center space-x-2">
+          <Image src={LogoImage} alt="EduFounder Logo" width={140} height={140} />
+        </div>
 
         {/* Navigation Links */}
-        <ul className="flex flex-row space-x-6">
+        <div className="flex items-center space-x-6">
           {[
             { name: "Home", path: "/" },
             { name: "About", path: "/about" },
-            { name: "Waitlist", path: "/waitlist" },
+            { name: "Careers", path: "/careers" },
           ].map((link) => (
-            <li key={link.path}>
-              <Link
-                href={link.path}
-                className={pathname === link.path ? "font-bold" : "btn"}
-              >
-                {link.name}
-              </Link>
-            </li>
+            <Link
+              key={link.path}
+              href={link.path}
+              className={`text-sm font-medium ${
+                pathname === link.path ? "text-black font-bold" : "text-gray-600 hover:text-black transition-colors"
+              }`}
+            >
+              {link.name}
+            </Link>
           ))}
-        </ul>
+
+          {/* Waitlist Button */}
+          <Link
+            href="/waitlist"
+            className="rounded-full bg-black text-white text-sm px-4 py-2 font-semibold hover:bg-gray-800 transition"
+          >
+            Join waitlist
+          </Link>
+        </div>
       </nav>
     </header>
   );
