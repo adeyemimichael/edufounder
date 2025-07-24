@@ -21,7 +21,7 @@ export default function Navbar() {
           {[
             { name: "Home", path: "/" },
             { name: "About", path: "/about" },
-            { name: "Careers", path: "/careers" },
+            { name: "Contact", path: "/contact" },
           ].map((link) => (
             <Link
               key={link.path}
@@ -37,7 +37,7 @@ export default function Navbar() {
           {/* Waitlist Button */}
           <Link
             href="/waitlist"
-            className="rounded-full bg-black text-white text-sm px-4 py-2 font-semibold hover:bg-gray-800 transition"
+            className="rounded-full bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 text-white text-sm px-4 py-2 font-semibold hover:bg-blue-800 transition"
           >
             Join waitlist
           </Link>

@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import './globals.css'; 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { AuthProvider } from "@/hooks/useAuth";
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
 //   subsets: ["latin"],
@@ -29,10 +30,11 @@ export default function RootLayout({
         // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         className=""
       >
-        {/* Navbar appears globally on every page */}
+        <AuthProvider>
            <Navbar />  
            <main>{children}</main>
-      <Footer></Footer>
+           <Footer />
+        </AuthProvider>
       </body>
     </html>
   );

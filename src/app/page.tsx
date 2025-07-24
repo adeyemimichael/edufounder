@@ -1,19 +1,17 @@
 import HeroSection from "@/components/Herosection";
-import Testimonials from "@/components/AiShowcase";
+import AiShowcase from "@/components/AiShowcase";
+import Features from "@/components/Features";
+import Testimonials from "@/components/Testimonials";
 
 import './globals.css';
 
-
-
-
 export default function Home() {
   return (
-    <div className="container">
-      
-      <HeroSection/>
-
-      <Testimonials/>
-   
+    <div>
+      <HeroSection />
+      <AiShowcase />
+      <Features />
+      <Testimonials />
     </div>
   );
 }
