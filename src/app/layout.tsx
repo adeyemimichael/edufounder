@@ -4,6 +4,7 @@ import './globals.css';
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { AuthProvider } from "@/hooks/useAuth";
+import AICompanion from "@/components/AICompanion";
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
 //   subsets: ["latin"],
@@ -34,6 +35,7 @@ export default function RootLayout({
            <Navbar />  
            <main>{children}</main>
            <Footer />
+           <AICompanion />
         </AuthProvider>
       </body>
     </html>
