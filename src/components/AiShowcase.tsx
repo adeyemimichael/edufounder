@@ -75,7 +75,7 @@ const FlipText = ({ text }: { text: string }) => {
         <motion.h1
             initial="initial"
             whileInView="hovered"
-            className="relative block overflow-hidden whitespace-nowrap text-4xl font-black sm:text-6xl md:text-7xl lg:text-8xl text-gray-800"
+            className="relative block overflow-hidden whitespace-nowrap text-4xl font-black sm:text-6xl md:text-4xl lg:text-4xl text-gray-800"
         >
             <div>
                 {text.split("").map((char, i) => (
