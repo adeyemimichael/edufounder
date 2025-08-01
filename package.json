@@ -6,25 +6,45 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "jest"
   },
   "dependencies": {
+    "@react-google-maps/api": "^2.19.3",
     "@tailwindcss/postcss": "^4.0.8",
+<<<<<<< HEAD
     "clsx": "^2.1.1",
+=======
+    "@tanstack/react-query": "^5.0.0",
+    "@types/google.maps": "^3.55.3",
+    "axios": "^1.6.7",
+    "chart.js": "^4.4.1",
+>>>>>>> 8cdc669686965ceac5ad1d2c04696bbf4d278aa7
     "firebase": "^11.4.0",
     "framer-motion": "^12.4.7",
     "next": "15.1.7",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "react-loading-skeleton": "^3.5.0"
+    "next-pwa": "^5.6.0",
+    "react": "^18.2.0",
+    "react-chartjs-2": "^5.2.0",
+    "react-dom": "^18.2.0",
+    "react-loading-skeleton": "^3.5.0",
+    "react-markdown": "^9.0.1",
+    "socket.io-client": "^4.7.4",
+    "swr": "^2.2.5",
+    "workbox-window": "^7.0.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@testing-library/jest-dom": "^6.4.2",
+    "@testing-library/react": "^14.2.1",
+    "@types/jest": "^29.5.12",
     "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
     "eslint": "^9",
     "eslint-config-next": "15.1.7",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
     "postcss": "^8.5.3",
     "tailwindcss": "^3.4.17",
     "typescript": "^5"
