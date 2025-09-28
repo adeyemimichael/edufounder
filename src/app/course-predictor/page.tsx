@@ -1,14 +1,34 @@
+"use client";
+
 import React from 'react';
 import ResultForm from '@/components/course-predictor/ResultForm';
 import PredictionResults from '@/components/course-predictor/PredictionResults';
 import { getPredictions } from '@/lib/api/course';
 
+interface FormData {
+  subjects: Array<{
+    name: string;
+    grade: string;
+  }>;
+  interests: string[];
+  careerGoals: string;
+}
+
+interface CourseRecommendation {
+  id: string;
+  name: string;
+  description: string;
+  matchPercentage: number;
+  requirements: string[];
+  careerPaths: string[];
+}
+
 export default function CoursePredictorPage() {
-  const [recommendations, setRecommendations] = React.useState(null);
+  const [recommendations, setRecommendations] = React.useState<CourseRecommendation[] | null>(null);
   const [loading, setLoading] = React.useState(false);
   const [error, setError] = React.useState<string | null>(null);
 
-  const handleSubmit = async (data) => {
+  const handleSubmit = async (data: FormData) => {
     try {
       setLoading(true);
       setError(null);
@@ -26,7 +46,7 @@ export default function CoursePredictorPage() {
     <div className="min-h-screen bg-gray-50 py-12">
       <div className="container mx-auto px-4">
         <h1 className="text-4xl font-bold text-center mb-8">Course Predictor</h1>
-        
+
         {error && (
           <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
             {error}

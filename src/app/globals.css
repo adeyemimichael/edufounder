@@ -20,11 +20,10 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: 'Geist', sans-serif;
-  cursor: none;
 }
 
 a, button {
-  cursor: none;
+  cursor: pointer;
 }
 
 @layer components {

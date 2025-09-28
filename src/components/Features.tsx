@@ -1,5 +1,5 @@
 "use client";
-<<<<<<< HEAD
+
 import { motion } from "framer-motion";
 import Image from "next/image";
 import ManageSearchImage from "@/assets/manage-search.svg";
@@ -58,7 +58,7 @@ export default function Features() {
             Three Pillars of <span className="text-blue-600">Career Clarity</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Unlike generic AI chatbots, EduFounder combines structured digital resources, 
+            Unlike generic AI chatbots, EduFounder combines structured digital resources,
             human-centric AI guidance, and real mentorship to eliminate career uncertainty.
           </p>
         </motion.div>
@@ -71,12 +71,12 @@ export default function Features() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-gray-50 p-8 rounded-2xl hover:shadow-lg transition-shadow"
+              className="bg-blue-50/80 backdrop-blur-md border border-blue-100/50 p-8 rounded-2xl hover:shadow-lg hover:bg-blue-50/90 transition-all duration-300"
             >
               <div className="text-4xl mb-4">{feature.icon}</div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">{feature.title}</h3>
               <p className="text-gray-600 mb-6">{feature.description}</p>
-              
+
               <ul className="space-y-2">
                 {feature.benefits.map((benefit, benefitIndex) => (
                   <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
@@ -94,14 +94,14 @@ export default function Features() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="bg-gradient-to-r from-blue-600 to-purple-700 rounded-3xl p-12 text-white text-center"
+          className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-3xl p-12 text-white text-center"
         >
           <div className="max-w-4xl mx-auto">
             <div className="flex justify-center mb-6">
-              <Image 
-                src={ManageSearchImage} 
-                alt="Search and Manage" 
-                width={80} 
+              <Image
+                src={ManageSearchImage}
+                alt="Search and Manage"
+                width={80}
                 height={80}
                 className="filter invert"
               />
@@ -110,8 +110,8 @@ export default function Features() {
               Why EduFounder is Different
             </h3>
             <p className="text-xl text-blue-100 mb-8">
-              Unlike ChatGPT or generic chatbots, EduFounder offers structured, actionable 
-              pathways tailored to each student's goals, backed by verified resources and 
+              Unlike ChatGPT or generic chatbots, EduFounder offers structured, actionable
+              pathways tailored to each student's goals, backed by verified resources and
               real human expertise from local mentors and tutorial centers.
             </p>
             <div className="grid md:grid-cols-3 gap-6 text-center">
@@ -130,72 +130,6 @@ export default function Features() {
             </div>
           </div>
         </motion.div>
-=======
-
-import { motion } from "framer-motion";
-
-const features = [
-  {
-    title: "Course Prediction",
-    description: "Get personalized course recommendations based on your academic performance and interests.",
-    icon: "📚"
-  },
-  {
-    title: "Tutorial Centers",
-    description: "Find and connect with the best tutorial centers near you.",
-    icon: "🎓"
-  },
-  {
-    title: "Career Guidance",
-    description: "Expert guidance to help you make informed decisions about your future.",
-    icon: "🎯"
-  },
-  {
-    title: "Resource Library",
-    description: "Access a vast collection of educational resources and study materials.",
-    icon: "📖"
-  }
-];
-
-export default function Features() {
-  return (
-    <section className="py-24 bg-gray-50">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-4xl font-bold mb-4"
-          >
-            Why Choose EduFounder?
-          </motion.h2>
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-xl text-gray-600"
-          >
-            Everything you need to make informed educational decisions
-          </motion.p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {features.map((feature, index) => (
-            <motion.div
-              key={feature.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow"
-            >
-              <div className="text-4xl mb-4">{feature.icon}</div>
-              <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
-              <p className="text-gray-600">{feature.description}</p>
-            </motion.div>
-          ))}
-        </div>
->>>>>>> 8cdc669686965ceac5ad1d2c04696bbf4d278aa7
       </div>
     </section>
   );

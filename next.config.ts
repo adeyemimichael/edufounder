@@ -7,7 +7,6 @@ const nextConfig: NextConfig = withPWA({
   skipWaiting: true,
   disable: process.env.NODE_ENV === 'development'
 })({
-  swcMinify: false,
   experimental: {
     forceSwcTransforms: false
   }

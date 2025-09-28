@@ -11,17 +11,14 @@
   },
   "dependencies": {
     "@react-google-maps/api": "^2.19.3",
-    "@tailwindcss/postcss": "^4.0.8",
-<<<<<<< HEAD
-    "clsx": "^2.1.1",
-=======
     "@tanstack/react-query": "^5.0.0",
     "@types/google.maps": "^3.55.3",
     "axios": "^1.6.7",
     "chart.js": "^4.4.1",
->>>>>>> 8cdc669686965ceac5ad1d2c04696bbf4d278aa7
+    "clsx": "^2.1.1",
     "firebase": "^11.4.0",
     "framer-motion": "^12.4.7",
+    "lucide-react": "^0.544.0",
     "next": "15.1.7",
     "next-pwa": "^5.6.0",
     "react": "^18.2.0",

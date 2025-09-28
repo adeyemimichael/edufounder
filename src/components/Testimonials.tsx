@@ -1,7 +1,37 @@
 "use client";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
+
+// Counter animation component
+const AnimatedCounter = ({ end, suffix = "", duration = 2 }: { end: number; suffix?: string; duration?: number }) => {
+  const [count, setCount] = useState(0);
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  useEffect(() => {
+    if (isInView) {
+      let startTime: number;
+      const animate = (currentTime: number) => {
+        if (!startTime) startTime = currentTime;
+        const progress = Math.min((currentTime - startTime) / (duration * 1000), 1);
+        
+        setCount(Math.floor(progress * end));
+        
+        if (progress < 1) {
+          requestAnimationFrame(animate);
+        }
+      };
+      requestAnimationFrame(animate);
+    }
+  }, [isInView, end, duration]);
+
+  return (
+    <span ref={ref}>
+      {count}{suffix}
+    </span>
+  );
+};
 
 export default function Testimonials() {
   const [activeTestimonial, setActiveTestimonial] = useState(0);
@@ -50,10 +80,10 @@ export default function Testimonials() {
   ];
 
   const stats = [
-    { number: "10,000+", label: "Students Helped" },
-    { number: "500+", label: "Universities" },
-    { number: "95%", label: "Success Rate" },
-    { number: "4.9/5", label: "User Rating" }
+    { number: 10000, suffix: "+", label: "Students Helped" },
+    { number: 500, suffix: "+", label: "Universities" },
+    { number: 95, suffix: "%", label: "Success Rate" },
+    { number: 4.9, suffix: "/5", label: "User Rating", isDecimal: true }
   ];
 
   return (
@@ -85,7 +115,11 @@ export default function Testimonials() {
           {stats.map((stat, index) => (
             <div key={index} className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
-                {stat.number}
+                {stat.isDecimal ? (
+                  <AnimatedCounter end={stat.number} suffix={stat.suffix} duration={2.5} />
+                ) : (
+                  <AnimatedCounter end={stat.number} suffix={stat.suffix} duration={2} />
+                )}
               </div>
               <div className="text-gray-600">{stat.label}</div>
             </div>
@@ -111,7 +145,7 @@ export default function Testimonials() {
             </blockquote>
             
             <div className="flex items-center justify-center space-x-4">
-              <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center text-white font-bold text-lg">
+              <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
                 {testimonials[activeTestimonial].name.split(' ').map(n => n[0]).join('')}
               </div>
               <div className="text-left">
@@ -163,7 +197,7 @@ export default function Testimonials() {
               </p>
               
               <div className="flex items-center space-x-3">
-                <div className="w-10 h-10 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
+                <div className="w-10 h-10 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center text-white font-bold text-sm">
                   {testimonial.name.split(' ').map(n => n[0]).join('')}
                 </div>
                 <div>

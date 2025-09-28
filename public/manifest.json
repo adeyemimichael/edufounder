@@ -1,7 +1,7 @@
 {
   "name": "EduFounder",
   "short_name": "EduFounder",
-  "description": "Your education companion",
+  "description": "Your one-stop ai career guidance platform",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",

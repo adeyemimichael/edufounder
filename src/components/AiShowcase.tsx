@@ -1,71 +1,154 @@
 "use client"
 import { motion } from "framer-motion"
+import { useState } from "react"
 
 export default function AiShowcase() {
+    const [activeCard, setActiveCard] = useState(0);
+
+    const features = [
+        {
+            step: "01",
+            title: "Access Digital Library",
+            description: "Explore curated career resources and dynamic brochures that demystify career paths and educational opportunities",
+            icon: "📚",
+            color: "from-blue-600 to-blue-700"
+        },
+        {
+            step: "02",
+            title: "Get AI-Powered Guidance",
+            description: "Receive personalized, human-centric AI recommendations that complement real mentorship and tutorial support",
+            icon: "🤖",
+            color: "from-blue-500 to-blue-600"
+        },
+        {
+            step: "03",
+            title: "Connect with Mentors",
+            description: "Find local tutorial centers and mentors who provide the human expertise you need for informed decisions",
+            icon: "👥",
+            color: "from-blue-400 to-blue-500"
+        }
+    ];
+
     return (
-        <section className="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen flex items-center justify-center py-20">
-            <div className="container mx-auto px-4 text-center">
-                <div className="max-w-4xl mx-auto">
-                    <motion.h2 
-                        initial={{ opacity: 0, y: 20 }}
+        <section className="relative min-h-screen bg-white overflow-hidden py-20">
+            {/* Background Elements */}
+            <div className="absolute inset-0 bg-gradient-to-br from-gray-50 to-blue-50/30"></div>
+            <div className="absolute top-20 right-10 w-72 h-72 bg-blue-500/5 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-20 left-10 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
+
+            <div className="relative z-10 container mx-auto px-6">
+                {/* Header */}
+                <div className="text-center mb-16">
+                    <motion.h2
+                        initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6 }}
-                        className="heading-section mb-12"
+                        transition={{ duration: 0.8 }}
+                        className="text-3xl md:text-4xl font-bold text-gray-900 mb-6"
                     >
                         Eliminate Career Uncertainty in 3 Steps
                     </motion.h2>
-                    
-                    <div className="grid md:grid-cols-3 gap-8 mb-16">
-                        <FeatureCard 
-                            step="01"
-                            title="Access Digital Library"
-                            description="Explore curated career resources and dynamic brochures that demystify career paths and educational opportunities"
-                            delay={0.2}
-                        />
-                        <FeatureCard 
-                            step="02"
-                            title="Get AI-Powered Guidance"
-                            description="Receive personalized, human-centric AI recommendations that complement real mentorship and tutorial support"
-                            delay={0.4}
-                        />
-                        <FeatureCard 
-                            step="03"
-                            title="Connect with Mentors"
-                            description="Find local tutorial centers and mentors who provide the human expertise you need for informed decisions"
-                            delay={0.6}
-                        />
-                    </div>
-
-                    <div className="text-center">
-                        <FlipText text="Navigate Your Future, Powered by Clarity" />
-                    </div>
                 </div>
+
+                {/* Floating Cards Container */}
+                <div className="relative max-w-8xl mx-auto">
+                    {/* Main Content Card - Slides from Left */}
+                    <motion.div
+                        initial={{ x: -100, opacity: 0 }}
+                        whileInView={{ x: 0, opacity: 1 }}
+                        transition={{ duration: 1, ease: "easeOut" }}
+                        className="relative bg-gradient-to-br from-blue-600 to-blue-700 rounded-3xl p-1 shadow-2xl"
+                    >
+                        <div className="bg-blue-50 rounded-3xl p-16 relative overflow-hidden min-h-[600px]">
+                            {/* Decorative Elements */}
+                            <div className="absolute top-8 left-8 w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
+                                <span className="text-2xl">📚</span>
+                            </div>
+                            <div className="absolute bottom-8 right-8 w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center">
+                                <span className="text-3xl">🎯</span>
+                            </div>
+
+                            {/* Three Feature Cards Inside */}
+                            <div className="grid md:grid-cols-3 gap-8 relative z-10 mt-8">
+                                {features.map((feature, index) => (
+                                    <motion.div
+                                        key={index}
+                                        initial={{ x: 300, opacity: 0, rotateY: 45 }}
+                                        whileInView={{ x: 0, opacity: 1, rotateY: 0 }}
+                                        transition={{
+                                            duration: 0.8,
+                                            delay: index * 0.2,
+                                            ease: "easeOut"
+                                        }}
+                                        whileHover={{
+                                            y: -10,
+                                            scale: 1.02,
+                                            rotateY: -5,
+                                            transition: { duration: 0.3 }
+                                        }}
+                                        className={`relative bg-gradient-to-br ${feature.color} rounded-2xl p-8 text-white shadow-xl cursor-pointer transform-gpu min-h-[280px]`}
+                                        style={{
+                                            transformStyle: "preserve-3d",
+                                            perspective: "1000px"
+                                        }}
+                                        onClick={() => setActiveCard(index)}
+                                    >
+                                        {/* Card Background Pattern */}
+                                        <div className="absolute inset-0 bg-white/10 rounded-2xl backdrop-blur-sm"></div>
+
+                                        {/* Card Content */}
+                                        <div className="relative z-10">
+                                            <div className="flex items-center justify-between mb-4">
+                                                <div className="text-3xl">{feature.icon}</div>
+                                                <div className="text-right">
+                                                    <div className="text-2xl font-bold opacity-90">{feature.step}</div>
+                                                </div>
+                                            </div>
+
+                                            <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
+                                            <p className="text-white/90 leading-relaxed text-sm">{feature.description}</p>
+
+                                            {/* Floating Action */}
+                                            <motion.div
+                                                className="mt-4 flex items-center gap-2 text-white/80 hover:text-white transition-colors"
+                                                whileHover={{ x: 5 }}
+                                            >
+                                                <span className="text-xs font-medium">Learn More</span>
+                                                <span>→</span>
+                                            </motion.div>
+                                        </div>
+
+                                        {/* Floating Indicator */}
+                                        {activeCard === index && (
+                                            <motion.div
+                                                layoutId="activeIndicator"
+                                                className="absolute -top-2 -right-2 w-6 h-6 bg-white rounded-full shadow-lg flex items-center justify-center"
+                                                initial={{ scale: 0 }}
+                                                animate={{ scale: 1 }}
+                                                transition={{ duration: 0.3 }}
+                                            >
+                                                <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+                                            </motion.div>
+                                        )}
+                                    </motion.div>
+                                ))}
+                            </div>
+                        </div>
+                    </motion.div>
+                </div>
+
+                {/* Bottom CTA */}
+                <motion.div
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.8 }}
+                    className="text-center mt-20"
+                >
+                    <FlipText text="Navigate Your Future, Powered by Clarity" />
+                </motion.div>
             </div>
         </section>
     )
 }
-
-const FeatureCard = ({ step, title, description, delay }: {
-    step: string;
-    title: string;
-    description: string;
-    delay: number;
-}) => {
-    return (
-        <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay }}
-            className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow"
-        >
-            <div className="w-12 h-12 bg-blue-500 text-white rounded-full flex items-center justify-center font-bold text-lg mb-4 mx-auto">
-                {step}
-            </div>
-            <h3 className="text-xl font-semibold text-gray-800 mb-3">{title}</h3>
-            <p className="text-gray-600 leading-relaxed">{description}</p>
-        </motion.div>
-    );
-};
 
 const DURATION = 0.25;
 const STAGGERED = 0.025;

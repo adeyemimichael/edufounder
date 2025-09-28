@@ -1,4 +1,6 @@
-import { useAuth } from '@/lib/auth';
+"use client";
+
+import { useAuth } from '@/hooks/useAuth';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -18,14 +20,14 @@ export default function DashboardHeader() {
               <button className="flex items-center space-x-2">
                 <div className="w-8 h-8 rounded-full overflow-hidden">
                   <Image
-                    src={user?.photoURL || '/assets/avatar-1.png'}
+                    src={user?.profileImage || '/assets/avatar-1.png'}
                     alt="Profile"
                     width={32}
                     height={32}
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <span className="text-sm font-medium">{user?.displayName || 'User'}</span>
+                <span className="text-sm font-medium">{user ? `${user.firstName} ${user.lastName}`.trim() || 'User' : 'User'}</span>
               </button>
 
               <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 hidden group-hover:block">
