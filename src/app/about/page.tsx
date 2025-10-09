@@ -60,14 +60,22 @@ export default function About() {
                 <motion.div
                   key={index}
                   className="absolute inset-0"
-                  initial={{ y: "100%" }}
+                  initial={{
+                    scale: 0.8,
+                    opacity: 0,
+                    zIndex: 0
+                  }}
                   animate={{
-                    y: index === currentImageIndex ? "0%" :
-                      index < currentImageIndex ? "-100%" : "100%"
+                    scale: index === currentImageIndex ? 1 : 0.9,
+                    opacity: index === currentImageIndex ? 1 : 0,
+                    zIndex: index === currentImageIndex ? 10 : images.length - index,
                   }}
                   transition={{
-                    duration: 1.2,
-                    ease: [0.25, 0.46, 0.45, 0.94] // Custom easing for smooth feel
+                    duration: 0.8,
+                    ease: [0.25, 0.46, 0.45, 0.94]
+                  }}
+                  style={{
+                    zIndex: index === currentImageIndex ? 10 : images.length - index
                   }}
                 >
                   <Image
@@ -95,8 +103,8 @@ export default function About() {
                     key={index}
                     onClick={() => setCurrentImageIndex(index)}
                     className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentImageIndex
-                        ? 'bg-white shadow-lg scale-110'
-                        : 'bg-white/50 hover:bg-white/70'
+                      ? 'bg-white shadow-lg scale-110'
+                      : 'bg-white/50 hover:bg-white/70'
                       }`}
                   />
                 ))}
