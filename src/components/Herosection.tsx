@@ -142,7 +142,7 @@ export default function HeroSection() {
           {/* Right Card - Document Management */}
           <div className="bg-gradient-to-br from-blue-600 to-blue-700 rounded-3xl p-8 shadow-2xl text-white hover:shadow-3xl transition-shadow">
             <div className="mb-6">
-              <h3 className="text-2xl font-bold mb-2">Document Hub</h3>
+              <h3 className="text-2xl font-bold mb-2">Document Place</h3>
               <p className="text-blue-100">Secure & Organized</p>
             </div>
 

@@ -3,7 +3,7 @@ import './globals.css';
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { AuthProvider } from "@/hooks/useAuth";
-import AICompanion from "@/components/AICompanion";
+// import AICompanion from "@/components/AICompanion";
 
 import ScrollToTop from "@/components/ui/ScrollToTop";
 import { registerServiceWorker } from "@/lib/serviceWorker";
@@ -43,7 +43,7 @@ export default function RootLayout({
           <Navbar />
           <main>{children}</main>
           <Footer />
-          <AICompanion />
+          {/* <AICompanion /> */}
         </AuthProvider>
       </body>
     </html>

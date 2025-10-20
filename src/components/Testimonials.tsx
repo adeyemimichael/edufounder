@@ -38,15 +38,15 @@ export default function Testimonials() {
 
   const testimonials = [
     {
-      name: "Sarah Chen",
+      name: "Sarah Agboola",
       role: "Computer Science Student",
-      university: "Stanford University",
+      university: "Federal University of Technology Akure ",
       avatar: "/assets/avatar-1.png",
-      content: "I was overwhelmed by career choices until EduFounder's digital library showed me clear pathways. The AI guidance plus local mentor connections made all the difference!",
+      content: "I was overwhelmed by career choices until EduFounder's digital brochure and library showed me clear pathways. The AI guidance plus local mentor connections made all the difference!",
       rating: 5
     },
     {
-      name: "Marcus Johnson",
+      name: "Adamu williams ",
       role: "High School Senior",
       university: "Planning for College",
       avatar: "/assets/avatar-2.png",
@@ -54,7 +54,7 @@ export default function Testimonials() {
       rating: 5
     },
     {
-      name: "Dr. Emily Rodriguez",
+      name: "Dr. Fola Ezekiel",
       role: "Parent & Educator",
       university: "Supporting her daughter",
       avatar: "/assets/avatar-3.png",
@@ -62,17 +62,17 @@ export default function Testimonials() {
       rating: 5
     },
     {
-      name: "David Kim",
+      name: "David Adesoye",
       role: "Pre-Med Student",
-      university: "UCLA",
+      university: "Unilag",
       avatar: "/assets/avatar-4.png",
       content: "Unlike ChatGPT, EduFounder gave me structured, actionable pathways for my medical career. The local tutorial center connections were invaluable for MCAT prep.",
       rating: 5
     },
     {
-      name: "Prof. Jessica Taylor",
+      name: "Prof. Jessica Adams",
       role: "Career Counselor",
-      university: "University of Michigan",
+      university: "University of Ibadan",
       avatar: "/assets/avatar-5.png",
       content: "EduFounder bridges education and career readiness like no other platform. It's not just another AI tool—it's a comprehensive ecosystem that truly helps students.",
       rating: 5
@@ -80,8 +80,8 @@ export default function Testimonials() {
   ];
 
   const stats = [
-    { number: 10000, suffix: "+", label: "Students Helped" },
-    { number: 500, suffix: "+", label: "Universities" },
+    { number: 3, suffix: "+", label: "Your Input" },
+    { number: 2, suffix: "+", label: "AI guided Recommendation" },
     { number: 95, suffix: "%", label: "Success Rate" },
     { number: 4.9, suffix: "/5", label: "User Rating", isDecimal: true }
   ];
@@ -232,7 +232,7 @@ export default function Testimonials() {
             whileTap={{ scale: 0.95 }}
             className="inline-block bg-blue-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-blue-700 transition"
           >
-            Join Our Waitlist
+            Join Us 
           </motion.a>
         </motion.div>
       </div>

@@ -34,7 +34,7 @@ export const metadata: Metadata = {
         <body
           className="container"
         >
-             <Navbar/>
+             {/* <Navbar/> */}
              <main>{children}</main>
         {/* <Footer></Footer> */}
         </body>

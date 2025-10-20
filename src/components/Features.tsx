@@ -9,12 +9,12 @@ export default function Features() {
     {
       icon: "📚",
       title: "Digital Library & Brochures",
-      description: "Access curated, dynamic career resources that demystify career paths and educational opportunities.",
-      benefits: ["Career path exploration", "Educational brochures", "Industry insights", "Verified resources"]
+      description: "Access curated, dynamic career resources by telling us what your interest and passion",
+      benefits: ["Career path guidance", "Educational brochures based on your Input", "Ai insights", "Verified resources"]
     },
     {
       icon: "📄",
-      title: "Document Management Hub",
+      title: "Document Management Place",
       description: "Secure, intuitive storage for all your academic records, certificates, and credentials.",
       benefits: ["Secure credential storage", "Easy document access", "Certificate verification", "Academic records"]
     },
@@ -98,30 +98,29 @@ export default function Features() {
         >
           <div className="max-w-4xl mx-auto">
             <div className="flex justify-center mb-6">
-              <Image
+              {/* <Image
                 src={ManageSearchImage}
                 alt="Search and Manage"
                 width={80}
                 height={80}
                 className="filter invert"
-              />
+              /> */}
             </div>
             <h3 className="text-3xl md:text-4xl font-bold mb-6">
               Why EduFounder is Different
             </h3>
             <p className="text-xl text-blue-100 mb-8">
-              Unlike ChatGPT or generic chatbots, EduFounder offers structured, actionable
-              pathways tailored to each student's goals, backed by verified resources and
-              real human expertise from local mentors and tutorial centers.
+              Unlike Generic chatbot platforms, EduFounder offers structured, actionable
+              Career path Recommendations, by taking input such as their passion, academic records to make informed guidance decision.
             </p>
             <div className="grid md:grid-cols-3 gap-6 text-center">
               <div>
                 <div className="text-3xl font-bold mb-2">3 Pillars</div>
-                <div className="text-blue-100">Digital Library + AI + Human Mentorship</div>
+                <div className="text-blue-100">Digital Brochure  + AI + Human Mentorship</div>
               </div>
               <div>
                 <div className="text-3xl font-bold mb-2">100%</div>
-                <div className="text-blue-100">Verified Resources & Security</div>
+                <div className="text-blue-100">Decisions based on Users Input</div>
               </div>
               <div>
                 <div className="text-3xl font-bold mb-2">Local</div>

@@ -24,7 +24,7 @@ export default function CallToAction() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-xl text-gray-300 mb-8"
           >
-            Join thousands of students who have found their perfect educational path with EduFounder
+            Join  students like you  who have found their perfect educational path with EduFounder
           </motion.p>
 
           <motion.div
@@ -37,7 +37,7 @@ export default function CallToAction() {
               href="/waitlist"
               className="inline-block bg-white text-black px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition"
             >
-              Join Waitlist
+              Join Us 
             </Link>
             <Link
               href="/course-predictor"

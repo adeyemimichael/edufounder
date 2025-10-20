@@ -8,7 +8,7 @@ export default function AiShowcase() {
     const features = [
         {
             step: "01",
-            title: "Access Digital Library",
+            title: "Access Digital Brochure",
             description: "Explore curated career resources and dynamic brochures that demystify career paths and educational opportunities",
             icon: "📚",
             color: "from-blue-600 to-blue-700"
@@ -18,14 +18,14 @@ export default function AiShowcase() {
             title: "Get AI-Powered Guidance",
             description: "Receive personalized, human-centric AI recommendations that complement real mentorship and tutorial support",
             icon: "🤖",
-            color: "from-blue-500 to-blue-600"
+            color: "from-blue-500 to-blue-700"
         },
         {
             step: "03",
             title: "Connect with Mentors",
             description: "Find local tutorial centers and mentors who provide the human expertise you need for informed decisions",
             icon: "👥",
-            color: "from-blue-400 to-blue-500"
+            color: "from-blue-500 to-blue-700"
         }
     ];
 

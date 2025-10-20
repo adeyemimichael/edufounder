@@ -4,11 +4,11 @@ import Image from "next/image";
 import PyramidImage from "@/assets/pyramid.png";
 import NoodleImage from "@/assets/noodle.png";
 import { useState, useEffect } from "react";
-import ImageSlide1 from "@/assets/image.jpg";
-import ImageSlide2 from "@/assets/imag2e.jpg";
-import ImageSlide3 from "@/assets/image3.jpg";
-import ImageSlide4 from "@/assets/image4.jpg";
-import ImageSlide5 from "@/assets/image6.jpg";
+import ImageSlide1 from "@/assets/broke.jpg";
+import ImageSlide2 from "@/assets/emmq.jpg";
+import ImageSlide3 from "@/assets/students.jpg";
+import ImageSlide4 from "@/assets/study.jpg";
+import ImageSlide5 from "@/assets/new.jpg";
 export default function About() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -33,7 +33,7 @@ export default function About() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative py-10 bg-gradient-to-br from-blue-50 to-indigo-100 h-[720px]">
+      <section className="relative py-10 bg-gradient-to-br from-blue-50 to-indigo-100 h-[760px]">
         <div className="container mx-auto px-3 h-full ">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

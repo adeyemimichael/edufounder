@@ -31,9 +31,7 @@ export const Footer = () => {
           <Link href="/contact" className="hover:text-white transition-colors">
             Contact
           </Link>
-          <Link href="/waitlist" className="hover:text-white transition-colors">
-            Waitlist
-          </Link>
+          
           <Link href="/login" className="hover:text-white transition-colors">
             Login
           </Link>
@@ -101,7 +99,7 @@ export const Footer = () => {
             <input
               type="email"
               placeholder="Enter your email"
-              className="flex-1 px-4 py-2 rounded-lg bg-gray-800 border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="flex-1 px-4 py-2 rounded-lg bg-gray-200 border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
             <button className="px-6 py-2 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition">
               Subscribe
