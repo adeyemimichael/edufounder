@@ -44,7 +44,10 @@ export default function RootLayout({
           <main>{children}</main>
           <Footer />
           {/* <AICompanion /> */}
+         
         </AuthProvider>
+
+         
       </body>
     </html>
   );

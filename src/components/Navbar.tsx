@@ -38,9 +38,9 @@ export default function Navbar() {
           {/* Waitlist Button */}
           <Link
             href="/login"
-            className="rounded-full bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 text-white text-sm px-4 py-2 font-semibold hover:bg-blue-800 transition"
+            className="md:rounded-full rounded-lg bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 text-white text-sm md:px-4 md:py-2  px-6  font-semibold hover:bg-blue-800 transition"
           >
-            Sign Up
+            <span className="p-3">Sign Up</span>
           </Link>
         </div>
       </nav>

@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-
+import {BookOpen, DecimalsArrowLeftIcon } from "lucide-react"
 export default function HeroSection() {
   return (
     <section className="relative min-h-screen bg-white overflow-hidden">
@@ -52,8 +52,8 @@ export default function HeroSection() {
             className="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed mb-10"
           >
             Your career path shouldn't feel like a maze. EduFounder eliminates career uncertainty
-            by combining a comprehensive digital library, secure document management, and
-            human-centric AI guidance—all while connecting you to local mentors and tutorial centers.
+            by combining a comprehensive digital brochure, secure document management, and
+            human-centric AI guidance.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -64,7 +64,7 @@ export default function HeroSection() {
             className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8"
           >
             <a
-              href="/waitlist"
+              href="/login"
               className="bg-blue-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-blue-700 transition-all duration-300 shadow-lg"
             >
               Start Your Journey
@@ -110,7 +110,7 @@ export default function HeroSection() {
           <div className="bg-white border border-blue-100/50 rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-shadow">
             <div className="flex items-center justify-between mb-6">
               <div className="bg-blue-50 border border-blue-200/30 p-3 rounded-2xl">
-                <span className="text-2xl">📚</span>
+                <span className="text-2xl text-blue-600  "><BookOpen/></span>
               </div>
               <div className="text-right">
                 <div className="text-3xl font-bold text-blue-600">95%</div>

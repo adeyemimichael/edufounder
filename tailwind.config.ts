@@ -11,7 +11,7 @@ export default {
     screens: {
       sm: "375px",
       md: "768px",
-      lg: "1400px",
+      lg: "1600px",
     },
     extend: {
       colors: {
@@ -22,7 +22,7 @@ export default {
         center: true,
         padding: {
           DEFAULT: "20px",
-          lg: "80px",
+          
         },
       },
     },

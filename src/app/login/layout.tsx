@@ -30,15 +30,11 @@ export const metadata: Metadata = {
     children: React.ReactNode;
   }>) {
     return (
-      <html lang="en">
-        <body
-          className="container"
-        >
+      <div className="">
              {/* <Navbar/> */}
              <main>{children}</main>
         {/* <Footer></Footer> */}
-        </body>
-      </html>
+  </div>
     );
   }
   
