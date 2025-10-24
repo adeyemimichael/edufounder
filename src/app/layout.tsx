@@ -1,12 +1,9 @@
 import type { Metadata, Viewport } from "next";
 import './globals.css';
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import { AuthProvider } from "@/hooks/useAuth";
-// import AICompanion from "@/components/AICompanion";
-
 import ScrollToTop from "@/components/ui/ScrollToTop";
 import { registerServiceWorker } from "@/lib/serviceWorker";
+import ConditionalLayout from "@/components/ConditionalLayout";
 
 export const metadata: Metadata = {
   title: "EduFounder",
@@ -40,14 +37,10 @@ export default function RootLayout({
       <body className="">
         <AuthProvider>
           <ScrollToTop />
-          <Navbar />
-          <main>{children}</main>
-          <Footer />
-          {/* <AICompanion /> */}
-         
+          <ConditionalLayout>
+            {children}
+          </ConditionalLayout>
         </AuthProvider>
-
-         
       </body>
     </html>
   );
