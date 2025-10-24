@@ -16,7 +16,7 @@ export default function Security() {
   return (
     <div className="space-y-6">
       <div>
-        <h3 className="text-lg font-medium">Change Password</h3>
+        <h3 className="text-lg text-gray-800 font-medium">Change Password</h3>
         <p className="text-sm text-gray-500">
           Ensure your account is using a strong password for security
         </p>
@@ -31,7 +31,7 @@ export default function Security() {
             type="password"
             value={currentPassword}
             onChange={(e) => setCurrentPassword(e.target.value)}
-            className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2"
+            className="mt-1 block w-full text-gray-800 rounded-md border border-gray-300 px-3 py-2"
           />
         </div>
 
@@ -43,7 +43,7 @@ export default function Security() {
             type="password"
             value={newPassword}
             onChange={(e) => setNewPassword(e.target.value)}
-            className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2"
+            className="mt-1 block w-full text-gray-800  rounded-md border border-gray-300 px-3 py-2"
           />
         </div>
 
@@ -55,7 +55,7 @@ export default function Security() {
             type="password"
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
-            className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2"
+            className="mt-1 block w-full rounded-md border text-gray-800  border-gray-300 px-3 py-2"
           />
         </div>
 
@@ -63,22 +63,22 @@ export default function Security() {
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
           type="submit"
-          className="w-full bg-black text-white py-2 px-4 rounded-md font-medium"
+          className="w-full bg-blue-600 text-white py-2 px-4 rounded-md font-medium"
         >
           Update Password
         </motion.button>
       </form>
 
       <div className="pt-6 border-t">
-        <h3 className="text-lg font-medium mb-4">Two-Factor Authentication</h3>
+        <h3 className="text-lg font-medium text-gray-800 mb-4">Two-Factor Authentication</h3>
         <div className="flex items-center justify-between">
           <div>
-            <p className="font-medium">Enable 2FA</p>
+            <p className="font-medium text-gray-800 ">Enable 2FA</p>
             <p className="text-sm text-gray-500">
               Add an extra layer of security to your account
             </p>
           </div>
-          <button className="bg-black text-white px-4 py-2 rounded-md">
+          <button className="bg-blue-600 text-white px-4 py-2 rounded-md">
             Enable
           </button>
         </div>

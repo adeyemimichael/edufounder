@@ -26,7 +26,7 @@ export default function Sidebar() {
                 whileHover={{ x: 5 }}
                 className={`flex items-center space-x-3 px-4 py-3 rounded-lg cursor-pointer ${
                   isActive
-                    ? 'bg-black text-white'
+                    ? 'bg-blue-700 text-white'
                     : 'text-gray-700 hover:bg-gray-50'
                 }`}
               >
