@@ -31,7 +31,7 @@ export default function GradeManager() {
 
   const calculateGPA = () => {
     const totalScore = grades.reduce((acc, grade) => acc + (grade.score / grade.maxScore) * 4, 0);
-    return (totalGPA / grades.length).toFixed(2);
+    return (totalScore / grades.length).toFixed(2);
   };
 
   return (

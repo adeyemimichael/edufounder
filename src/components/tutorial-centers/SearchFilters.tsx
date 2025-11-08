@@ -1,12 +1,12 @@
 import React from 'react';
-import { SearchFilters } from '@/types/tutorialCenter';
+import type { SearchFilters } from '@/types/tutorialCenter';
 
 interface SearchFiltersProps {
   filters: SearchFilters;
   onFilterChange: (filters: SearchFilters) => void;
 }
 
-export default function SearchFilters({ filters, onFilterChange }: SearchFiltersProps) {
+export default function SearchFiltersComponent({ filters, onFilterChange }: SearchFiltersProps) {
   const subjects = [
     'Mathematics',
     'Physics',

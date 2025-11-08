@@ -56,7 +56,7 @@ export default function AiShowcase() {
                         initial={{ x: -100, opacity: 0 }}
                         whileInView={{ x: 0, opacity: 1 }}
                         transition={{ duration: 1, ease: "easeOut" }}
-                        className="relative bg-gradient-to-br from-blue-600 to-blue-700 rounded-3xl p-1 shadow-2xl"
+                        className="relative bg-gradient-to-br from-blue-600 to-blue-700 rounded-3xl p-[1px] shadow-2xl"
                     >
                         <div className="bg-blue-50 rounded-3xl p-16 relative overflow-hidden min-h-[600px]">
                             {/* Decorative Elements */}
